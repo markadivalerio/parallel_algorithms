@@ -15,33 +15,40 @@ double euclidean_length(std::vector<double> vector) {
 }
 
 
-void up_sweep(std::vector<int> &indexes) {
-  int n = indexes.size();
+void parallel_prefix_scan_sum(std::vector<int> &arr) {
+  int n = arr.size();
   int nceil = (int) std::pow(2, ceil(std::log2(n)));
   int h = (int) std::log2(nceil);
 
+  // upward sweep
   for(int i=1; i<=h; i++) {
     int step = 1 << i;
     #pragma omp parallel for
     for(int j=step-1; j<n; j+=step) {
-      indexes[j] += indexes[j - step/2];
+      arr[j] += arr[j - step/2];
     }
   }
-}
+
+  std::cout << "AFTER UPWARD SWEEP:        ";  
+  for (auto i = arr.begin(); i != arr.end(); ++i)
+    std::cout << *i << ' ';
+  std::cout << std::endl;
 
 
-void down_sweep(std::vector<int> &indexes) {
-  int n = indexes.size();
-  int nceil = (int) std::pow(2, ceil(std::log2(n)));
-  int h = (int) std::log2(nceil);
-  
+  // downward sweep 
   for(int i=h-1; i > 0; i--) {
     int step = 1 << i;
     #pragma omp parallel for
     for(int j=step - 1; j<n-step/2; j += step) {
-      indexes[j + step/2] += indexes[j];
+      arr[j + step/2] += arr[j];
     }
   }
+  
+  std::cout << "AFTER DOWNWARD SWEEP:      ";
+  for (auto i = arr.begin(); i != arr.end(); ++i)
+    std::cout << *i << ' ';
+  std::cout << std::endl;
+  
 }
 
 
@@ -74,20 +81,7 @@ std::vector<int64_t> discard_duplicates(std::vector<int64_t> sorted_vector) {
 //  for(i=1; i<n; i++)
 //    indexes[i] = indexes[i] + indexes[i-1];
 
-
-  up_sweep(indexes);
-  std::cout << "AFTER UPWARD SWEEP:        ";
-  for (auto i = indexes.begin(); i != indexes.end(); ++i)
-     std::cout << *i << ' ';
-  std::cout << std::endl;
-
-
-  down_sweep(indexes);
-  std::cout << "AFTER DOWNWARD SWEEP:      ";
-  for (auto i = indexes.begin(); i != indexes.end(); ++i)
-     std::cout << *i << ' ';
-  std::cout << std::endl;  
-
+  parallel_prefix_scan_sum(indexes);
 
   max = indexes[n-1];
   std::vector<int64_t> unique = std::vector<int64_t>(max);
