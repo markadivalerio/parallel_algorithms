@@ -1,0 +1,3 @@
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/build/CMakeFiles/rebuild_cache.dir
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/build/CMakeFiles/hw1.dir
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/build/CMakeFiles/edit_cache.dir

@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/src/hw1.cpp
+iostream
+-
+omp.h
+-
+cmath
+-
+hw1.h
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/src/hw1.h
+
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/src/hw1.h
+vector
+-
+
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/src/main.cpp
+iostream
+-
+vector
+-
+hw1.h
+/mnt/v/school/grad/2020_SMR_EE382V_Parallel_Algorithms/assignments/hw1/src/hw1.h
+
