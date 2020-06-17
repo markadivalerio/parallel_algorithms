@@ -3,8 +3,6 @@
 // Returns the euclidian lenght of 'vector'.
 double euclidean_length(std::vector<double> vector);
 
-void parallel_prefix_scan_sum(std::vector<int> &arr);
-
 // Returns a sorted vector that contains all the unique elements in 'sorted_vector'.
 //
 // NOTE: non-const vectors are not thread-safe.

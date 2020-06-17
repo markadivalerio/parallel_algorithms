@@ -19,8 +19,7 @@ double euclidean_length(std::vector<double> vector) {
   return sqrt(total);
 }
 
-
-void parallel_prefix_scan_sum(std::vector<int> &arr) {
+/*void parallel_prefix_try1(std::vector<int> &arr) {
   int n = arr.size();
   int h = (int) ceil(std::log2(n));
 
@@ -53,48 +52,81 @@ void parallel_prefix_scan_sum(std::vector<int> &arr) {
     std::cout << *i << ' ';
   std::cout << std::endl;
   
+}*/
+
+void print(std::vector<int64_t> arr) {
+  for(int i=0; i < arr.size(); i++)
+    std::cout << arr[i] << " ";
+  std::cout << std::endl;
 }
 
 
 std::vector<int64_t> discard_duplicates(std::vector<int64_t> sorted_vector) {
   // Your code goes here
-  std::vector<int> indexes = std::vector<int>(sorted_vector.size(), 0);
   int i, n, val, max;
   n = sorted_vector.size();
+  double logn = std::log2(n); //assumes power of 2
+  std::vector<int64_t> idx = std::vector<int64_t>(n, 0);
 
-  std::cout << "INPUT:                     ";
-  for (auto i = sorted_vector.begin(); i != sorted_vector.end(); ++i)
-    std::cout << *i << ' ';
-  std::cout << std::endl;
+  std::cout << "INPUT:    ";
+  print(sorted_vector);
   
   // find when the numbers change. give 1 = new, 0=duplicate of previous value
-  indexes[0] = 1;
+  idx[0] = 1;
   #pragma opm parallel for default(shared) private(i)
   for(i=1; i<n; i++) {
     if(sorted_vector[i] != sorted_vector[i-1])
-      indexes[i] = 1;
+      idx[i] = 1;
   }
 
-  std::cout << "T/F UNIQUE ONLY RESULTS:   ";
-  for (auto i = indexes.begin(); i != indexes.end(); ++i)
-    std::cout << *i << ' ';
-  std::cout << std::endl;
+  std::cout << "UNIQUE:   ";
+  print(idx);
 
+  std::cout << "------PARALLEL PREFIX DEBUG------" << std::endl;
+  std::cout << "UPWARD:" << std::endl;
+  std::cout << "logn = " << logn << std::endl;
+  for(int h=0; h < logn; h++) {
+    int twoh = std::pow(2,h);
+    int twoh1 = std::pow(2, h+1);
+    std::cout << "h=" << h << "   2^h=" << twoh << "   2^(h+1)=" << twoh1 << std::endl;
+
+    #pragma omp parallel for private(i)
+    for(i=0; i<n-1; i += twoh1) {
+      idx[i + twoh1 - 1] = idx[i + twoh - 1] + idx[i + twoh1 - 1];
+    }
+    #pragma omp barrier
+    print(idx);
+  }
+
+  std::cout << std::endl << "DOWNWARD:" << std::endl;
+
+  idx[n-1] = 0;
+  for(int h=logn-1; h >= 0; h--) {
+    int twoh = std::pow(2,h);
+    int twoh1 = std::pow(2, h+1);
+    std::cout << "h=" << h << "   2^h=" << twoh << "   2^(h+1)=" << twoh1 << std::endl;
+    #pragma omp parallel for private(i, val)
+    for(i=0; i < n; i+=twoh1) {
+      val = idx[i + twoh - 1];
+      idx[i + twoh - 1] = idx[i + twoh1 - 1];
+      idx[i + twoh1 - 1] = val + idx[i + twoh1 - 1];
+    }
+    #pragma omp barrier
+    print(idx);
+  }
+  std::cout << "-----END PARALLEL PREFIX-----" << std::endl;
+
+  max = idx[n-1];
+  #pragma opm parallel for private(i, val)
+  for(i=1; i<n; i++) {
+    val = sorted_vector[i];
+    sorted_vector[idx[i]] = val;
+  }
+  #pragma omp barrier
   
-// SERIAL:                                 
-//  for(i=1; i<n; i++)
-//    indexes[i] = indexes[i] + indexes[i-1];
+  if(max < n)
+    sorted_vector.erase(sorted_vector.begin() + max, sorted_vector.end());
+  return sorted_vector;
 
-  parallel_prefix_scan_sum(indexes);
-
-  max = indexes[n-1];
-  std::vector<int64_t> unique = std::vector<int64_t>(max);
-  #pragma opm parallel for default(shared) private(i, val)
-  for(i=0; i<n; i++) {
-    val = indexes[i] - 1;
-    unique[val] = sorted_vector[i];
-  }
- 
-  return unique;
 }
 
