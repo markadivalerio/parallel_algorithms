@@ -1,0 +1,13 @@
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\obj\Debug\netcoreapp3.1\project.csprojAssemblyReference.cache
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\obj\Debug\netcoreapp3.1\project.AssemblyInfoInputs.cache
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\obj\Debug\netcoreapp3.1\project.AssemblyInfo.cs
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\obj\Debug\netcoreapp3.1\project.csproj.CoreCompileInputs.cache
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\bin\Debug\netcoreapp3.1\project.deps.json
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\bin\Debug\netcoreapp3.1\project.dll
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\bin\Debug\netcoreapp3.1\project.pdb
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\obj\Debug\netcoreapp3.1\project.dll
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\obj\Debug\netcoreapp3.1\project.pdb
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\bin\Debug\netcoreapp3.1\project.exe
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\bin\Debug\netcoreapp3.1\project.runtimeconfig.json
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\bin\Debug\netcoreapp3.1\project.runtimeconfig.dev.json
+V:\school\grad\2020_SMR_EE382V_Parallel_Algorithms\assignments\project\project\project\obj\Debug\netcoreapp3.1\project.genruntimeconfig.cache
