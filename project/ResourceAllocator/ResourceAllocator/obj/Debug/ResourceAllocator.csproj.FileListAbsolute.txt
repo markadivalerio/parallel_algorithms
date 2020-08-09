@@ -1,0 +1,10 @@
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\bin\Debug\ResourceAllocator.exe.config
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\bin\Debug\ResourceAllocator.exe
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\bin\Debug\ResourceAllocator.pdb
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\obj\Debug\ResourceAllocator.csprojAssemblyReference.cache
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\obj\Debug\ResourceAllocator.Form1.resources
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\obj\Debug\ResourceAllocator.Properties.Resources.resources
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\obj\Debug\ResourceAllocator.csproj.GenerateResource.cache
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\obj\Debug\ResourceAllocator.csproj.CoreCompileInputs.cache
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\obj\Debug\ResourceAllocator.exe
+C:\Users\sanja\source\repos\ResourceAllocator\ResourceAllocator\obj\Debug\ResourceAllocator.pdb

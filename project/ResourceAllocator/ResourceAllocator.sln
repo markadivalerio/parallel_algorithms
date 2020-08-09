@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResourceAllocator", "ResourceAllocator\ResourceAllocator.csproj", "{B145FFF1-B9EE-4185-A020-DC062C99D93D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B145FFF1-B9EE-4185-A020-DC062C99D93D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B145FFF1-B9EE-4185-A020-DC062C99D93D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B145FFF1-B9EE-4185-A020-DC062C99D93D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B145FFF1-B9EE-4185-A020-DC062C99D93D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24A22D6A-1A56-4179-8C4D-9BD382FDFABA}
+	EndGlobalSection
+EndGlobal

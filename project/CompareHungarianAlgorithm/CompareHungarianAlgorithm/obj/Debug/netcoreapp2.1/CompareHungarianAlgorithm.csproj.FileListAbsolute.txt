@@ -1,0 +1,11 @@
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\bin\Debug\netcoreapp2.1\CompareHungarianAlgorithm.deps.json
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\bin\Debug\netcoreapp2.1\CompareHungarianAlgorithm.runtimeconfig.json
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\bin\Debug\netcoreapp2.1\CompareHungarianAlgorithm.runtimeconfig.dev.json
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\bin\Debug\netcoreapp2.1\CompareHungarianAlgorithm.dll
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\bin\Debug\netcoreapp2.1\CompareHungarianAlgorithm.pdb
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\obj\Debug\netcoreapp2.1\CompareHungarianAlgorithm.csprojAssemblyReference.cache
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\obj\Debug\netcoreapp2.1\CompareHungarianAlgorithm.csproj.CoreCompileInputs.cache
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\obj\Debug\netcoreapp2.1\CompareHungarianAlgorithm.AssemblyInfoInputs.cache
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\obj\Debug\netcoreapp2.1\CompareHungarianAlgorithm.AssemblyInfo.cs
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\obj\Debug\netcoreapp2.1\CompareHungarianAlgorithm.dll
+C:\Users\sanja\source\repos\CompareHungarianAlgorithm\CompareHungarianAlgorithm\obj\Debug\netcoreapp2.1\CompareHungarianAlgorithm.pdb
